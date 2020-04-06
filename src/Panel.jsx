@@ -42,6 +42,7 @@ class Panel extends Component {
     onKeyDown: noop,
     onAmPmChange: noop,
     inputReadOnly: false,
+    disableInputStep: false,
   };
 
   state = {};
@@ -172,6 +173,7 @@ class Panel extends Component {
           onKeyDown={onKeyDown}
           inputReadOnly={inputReadOnly}
           clearIcon={clearIcon}
+          disableInputStep={!!this.disableInputStep}
         />
         <Combobox
           prefixCls={prefixCls}
